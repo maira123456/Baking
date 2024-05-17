@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>Index</title>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+$('b').click(function(){
+$('#idk').find('li').css('color','red');
+});
+});
+</script>
+<style>
+.spiner{
+background-color:lightblue;
+height: 30px;
+width: 30px;
+border-radius: 50%;
+border: 25px solid white;
+border-top: 20px solid indigo;
+animation: ani 2.5s linear infinite;
+}
+@keyframes ani{
+to{
+transform: rotate(360deg);
+}
+}
+.wrapper{text-align:center;}
+.faqbox{background-color:lightblue;}.faqbox li{list-style-type:none;}
+.answer{display:none;}
+.faq-list-item{position:relative;cursor:pointer;}
+.faq-list-item span{position:absolute;display:inline-block;top:20px;right:170px;}
+</style>
+</head>
+<body style="background-color:#84f0de;font-family: Lucida Console;">
+<h1 style="background-color:#fac7f8;color:black; font-size:61px; height="40%" width="100%"><marquee>Cooking Time</marquee></h1><br>
+
+
+<header>
+<nav>
+<center>
+
+
+<left align>
+<div class="spiner"></div>
+</left align>
+<ul>
+
+<div class='box' id='b1'><li style="display:inline-block"><a href="index.html">Home</a></li></div>|
+<div class='box' id='b2'><li style="display:inline-block"><a href="icecream.html">Ice cream</a></li></div>|
+<div class='box' id='b3'><li style="display:inline-block"><a href="brownie.html">Brownie</a></li></div>|
+<div class='box' id='b4'><li style="display:inline-block"><a href="https://www.milkmaid.in">more recipes</a></li></div>|
+
+</ul>
+</center>
+</nav><hr><br><br>
+</header>
+<section>
+<div class= 'wrapper'><h1>FAQ</h1>
+<div class= 'faqbox'>
+<ul>
+<li class='faq-list-item'>
+<h2>Can we use white chocolate as well?</h2><span>+</span>
+<div class='answer'><p>Though some attempt to, the flavor is not as pleasent as milk chocolate, so we recomend to steer clear from it.</p></div>
+</li>
+<li class='faq-list-item'>
+<h2>Are there any more recipes?</h2><span>+</span>
+<div class='answer'><p>No, we have not added any more recipes..YET!</p></div>
+</li>
+<li class='faq-list-item'>
+<h2>What should we do if we have any questions?</h2><span>+</span>
+<div class='answer'><p>If you have any questions, click the "Contact Us" link and ask away!</p></div>
+<li class='faq-list-item'>
+<h2>Are their any ways to make it healthier?</h2><span>+</span>
+<div class='answer'><p>If looking to make a sweet treat a little healthier then be sure to used dark chocolate as it has been proven to be healthy.</p></div>
+</li>
+
+</li>
+
+</ul>
+</div>
+
+
+
+
+</div>
+</section>
+</div>
+<footer> <h5> <i>This website is made by Maira</i> </h5><a href="contact-form.html">Contact Us</a></footer>
+<script>
+$(function(){
+$('.faq-list-item').click(function(){
+var $answer= $(this).find('.answer');
+if($answer.hasClass('open')){
+$answer.removeClass('open');
+$answer.slideUp();
+$(this).find('span').text('+');
+}
+else{
+$answer.addClass('open');
+$answer.slideDown();
+$(this).find('span').text('-');
+//Find the <span> elements inside, then rewrite the content using the text() method
+}
+});
+});
+</script>
+</body>
+</html>
+                           
+   
